@@ -1,18 +1,3 @@
-/* цвета */
-/* основной мелкий текст описания и ссылки #757575 */
-/* заголовки #212121 */
-/* акцент : текст на кнопках и синем фоне + футер rgba(255, 255, 255, 0.6) */
-/* бирюзовый акцент :  #2196F3 */
-
-/* паддинги даем именно секциям 
-контейнер НЕ ДОЛЖЕН иметь свои паддинги, 
-его задача обернуть и центрировать ГОРИЗОНТАЛЬНО.
-вертикально контейнер ничего не должен делать */
-/* по умолчанию поставть текст-тайтл text-align: center ???
-или добавить утилиту centered везде где надо*/
-
-/**/
-
 :root {
   --primary-text-color: #757575;
   --title-text-color: #212121;
@@ -26,7 +11,7 @@
 
 .pagebody {
   font-family: Roboto, sans-serif;
-  background-color: var(--primary-bg-color);
+  background-color: var(--primary-white-color);
   color: var(--primary-text-color);
   margin: 0 auto;
 }
@@ -62,17 +47,8 @@ img {
 }
 
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
-} /**/
-
-/* ??????????универсальный селектор оставлять? 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+  padding: 94px 0;
 }
-*/
 
 /* === СТИЛИ ДЛЯ index.html === */
 
@@ -88,15 +64,11 @@ img {
 .site-nav,
 .header-contacts {
   display: flex;
-  height: 80px;
   align-items: center;
 }
 
-.header-nav-section {
-}
 .header-logo {
-  padding-top: 32px;
-  padding-bottom: 32px;
+  padding: 25px 0;
 }
 .logo {
   display: block;
@@ -181,11 +153,9 @@ img {
 /* Hero */
 
 .blue-box {
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding: 200px 0;
   text-align: center;
 
-  height: 600px;
   background-color: var(--accent-darkbox-color);
 }
 
@@ -207,14 +177,16 @@ img {
 }
 
 .hero-btn {
+  padding: 10px 32px;
   font-style: normal;
   font-weight: bold;
   font-size: 16px;
   line-height: 1.9;
   letter-spacing: 0.06em;
+  border-radius: 4px;
+
   background-color: var(--accent-color);
   color: var(--primary-white-color);
-  border-radius: 4px;
 }
 
 .blue-box .hero-btn:hover {
@@ -222,10 +194,6 @@ img {
 }
 
 /* Features Section */
-
-.feature-box {
-  padding-bottom: 47px;
-}
 
 .feature-list {
   display: flex;
@@ -264,7 +232,7 @@ img {
 /* Service list section */
 
 .services-box {
-  padding-top: 47px;
+  padding-top: 0;
 }
 
 .services-title {
@@ -275,8 +243,9 @@ img {
   font-size: 36px;
   line-height: 1.2;
   letter-spacing: 0.03em;
-  color: var(--title-text-color);
   text-align: center;
+
+  color: var(--title-text-color);
 }
 
 .services-list {
@@ -298,9 +267,6 @@ img {
 
 .our-team-section {
   background-color: #f5f4fa;
-}
-
-.our-team-box {
 }
 
 .our-team-title {
@@ -327,14 +293,20 @@ img {
   margin-right: var(--card-set-gap);
 
   background-color: var(--primary-white-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
 }
 
 .team-list .worker-card:last-child {
   margin-right: 0;
 }
 
+.card-content {
+  padding: var(--card-set-gap) 0;
+}
 .worker-name {
-  margin-top: var(--card-set-gap);
   margin-bottom: 10px;
 
   font-style: normal;
@@ -342,13 +314,12 @@ img {
   font-size: 16px;
   line-height: 1.2;
   letter-spacing: 0.03em;
-  color: var(--title-text-color);
   text-align: center;
+
+  color: var(--title-text-color);
 }
 
 .worker-function {
-  margin-bottom: 30px;
-
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -357,45 +328,53 @@ img {
   text-align: center;
 }
 
-/* ==Footer== */
+/* Footer */
 
 .footer {
-  height: 252px;
   background-color: var(--accent-darkbox-color);
 }
 
 .footer-box {
+  display: flex;
+  flex-direction: column;
+  padding: 60px 0;
 }
 
-.footer-logo {
-  display: block;
+.footer-box .item:not(:last-child) {
+  margin-bottom: 9px;
 }
 
-.footer-box a {
+.footer-box .item:first-child {
+  margin-bottom: 20px;
+}
+
+.footer a,
+address {
   color: var(--primary-white-color);
 }
-.footer-contact-list {
-  display: block;
-}
-.footer-contact-list a {
+
+.footer-box .footer-link,
+address {
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
   line-height: 1.7;
   letter-spacing: 0.03em;
-  color: var(--primary-white-color);
   text-decoration: none;
 }
-.footer-contact-list .digital-contact {
+
+.footer-box .digital-contact {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+  text-decoration: none;
   color: rgba(255, 255, 255, 0.6);
 }
-.footer-link address {
-  font-style: normal;
-}
-.footer-contact-list .footer-link:hover {
-  color: var(--accent-color);
-}
-.footer-contact-list .footer-link:focus {
+
+.footer .footer-link:hover,
+.footer .footer-link:focus {
   color: var(--accent-color);
 }
 
@@ -403,36 +382,30 @@ img {
 
 /* portfolio button filter */
 
-.button-section {
-  height: 54px;
-  background-color: var(--primary-bg-color);
-}
-
 .portfolio-btn-box {
   display: flex;
   justify-content: center;
 
-  margin-bottom: 34px;
+  margin-bottom: 50px;
 }
 
 .portfolio-btn-box .item:not(:last-child) {
   margin-right: 8px;
 }
 
-.button {
-  color: var(--title-text-color);
-  background-color: #f5f4fa;
-  border-radius: 4px;
-  border: 1px solid transparent;
-}
-
 .portfolio-btn-box .portfolio-btn {
+  padding: 6px 22px;
   font-family: inherit;
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.6;
   letter-spacing: 0.03em;
+  border-radius: 4px;
+  border: 1px solid transparent;
+
+  color: var(--title-text-color);
+  background-color: #f5f4fa;
 }
 
 .button .portfolio-btn:hover,
@@ -449,10 +422,6 @@ img {
   display: flex;
   flex-wrap: wrap;
 }
-
-/*  margin-bottom: calc(-1 * var(--card-set-gap));
-  margin-right: calc(-1 * var(--card-set-gap));
-  */
 
 .portfolio-menu > .portfolio-card {
   box-sizing: border-box;
@@ -471,10 +440,7 @@ img {
 }
 
 .prtf-card-content {
-  padding-top: 20px;
-  padding-right: 24px;
-  padding-bottom: 20px;
-  padding-left: 24px;
+  padding: 20px 24px;
   border-left: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
@@ -487,8 +453,10 @@ img {
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
+
   color: var(--title-text-color);
 }
+
 .card-description {
   font-style: normal;
   font-weight: normal;
