@@ -41,8 +41,7 @@ img {
 .container {
   box-sizing: border-box;
   width: 1200px;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding: 0 15px;
   margin: 0 auto;
 }
 
@@ -164,7 +163,6 @@ img {
   margin-left: auto;
   margin-right: auto;
   width: 696px;
-  height: 120px;
 
   font-style: normal;
   font-weight: 900;
@@ -287,7 +285,7 @@ img {
   display: flex;
 }
 
-.team-list > .worker-card {
+.team-list .worker-card {
   box-sizing: border-box;
   flex-basis: calc((100% - 3 * var(--card-set-gap)) / 4);
   margin-right: var(--card-set-gap);
@@ -337,7 +335,7 @@ img {
 .footer-box {
   display: flex;
   flex-direction: column;
-  padding: 60px 0;
+  padding: 60px 15px;
 }
 
 .footer-box .item:not(:last-child) {
@@ -428,6 +426,7 @@ address {
   flex-basis: calc((100% - 2 * var(--card-set-gap)) / 3);
   margin-bottom: var(--card-set-gap);
   margin-right: var(--card-set-gap);
+
   background-color: var(--primary-white-color);
 }
 
@@ -441,6 +440,7 @@ address {
 
 .prtf-card-content {
   padding: 20px 24px;
+
   border-left: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
