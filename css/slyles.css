@@ -78,6 +78,11 @@ img {
 
 /* Header section */
 
+.header {
+  background-color: var(--primary-white-color);
+  border-bottom: 1px solid #ececec;
+}
+
 .header-nav-section,
 .nav,
 .site-nav,
@@ -88,14 +93,13 @@ img {
 }
 
 .header-nav-section {
-  background-color: var(--primary-white-color);
-  border-bottom: 1px solid #ececec;
 }
-
-.logo {
-  display: block;
+.header-logo {
   padding-top: 32px;
   padding-bottom: 32px;
+}
+.logo {
+  display: block;
 
   font-family: Raleway;
   font-style: normal;
@@ -178,6 +182,7 @@ img {
 
 .blue-box {
   padding-top: 200px;
+  padding-bottom: 200px;
   text-align: center;
 
   height: 600px;
@@ -186,6 +191,8 @@ img {
 
 .hero-title {
   margin-bottom: var(--card-set-gap);
+  margin-left: auto;
+  margin-right: auto;
   width: 696px;
   height: 120px;
 
@@ -289,8 +296,11 @@ img {
 
 /* Our team section */
 
-.our-team-box {
+.our-team-section {
   background-color: #f5f4fa;
+}
+
+.our-team-box {
 }
 
 .our-team-title {
@@ -349,24 +359,23 @@ img {
 
 /* ==Footer== */
 
-.footer-box {
-  display: flex;
-  flex-direction: column;
-  padding-top: 50px;
-  padding-bottom: 60px;
-
+.footer {
   height: 252px;
   background-color: var(--accent-darkbox-color);
 }
 
-.footer-box > .footer-logo {
+.footer-box {
+}
+
+.footer-logo {
   display: block;
-  padding-top: 10px;
-  padding-bottom: 10px;
 }
 
 .footer-box a {
   color: var(--primary-white-color);
+}
+.footer-contact-list {
+  display: block;
 }
 .footer-contact-list a {
   font-style: normal;
@@ -394,14 +403,16 @@ img {
 
 /* portfolio button filter */
 
+.button-section {
+  height: 54px;
+  background-color: var(--primary-bg-color);
+}
+
 .portfolio-btn-box {
   display: flex;
   justify-content: center;
 
-  height: 54px;
-
   margin-bottom: 34px;
-  background-color: var(--primary-bg-color);
 }
 
 .portfolio-btn-box .item:not(:last-child) {
